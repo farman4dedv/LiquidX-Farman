@@ -1,0 +1,36 @@
+The project is built using the Gameplay Ability System (GAS) due to its modularity and built-in support for replication. One of the main reasons I enjoy working with GAS is its flexibility and how it has become a standard system for many RPG and MOBA games.
+
+Key Features:
+- Health Bar: Displays the player's health and updates during gameplay.
+- Multiplayer Combat: Players can attack and kill each other, with each attack having a cooldown to prevent spamming.
+- Damage Calculation: Implemented custom damage formulas using GameplayEffectExecutionCalculation, which allows for complex damage calculations, factoring in variables such as armor.
+- Retargeted Attack Animation: Applied retargeted animations for the attack montage to ensure smooth and synchronized character movement.
+- Cube Destruction: A destructible cube that can be damaged and destroyed.
+- Double Jump Ability: Players can perform a double jump, enhancing mobility in the game.
+
+Development Process:
+1. GAS Setup (1 Hour): 
+   - Set up the base Gameplay Ability System, including the AbilitySystemComponent, AttributeSet, and AbilitySystemInterface.
+   
+2. Double Jump Ability (20 Minutes):
+   - Implemented the double jump functionality, allowing players to perform a second jump while airborne.
+
+3. Damageable Cube Actor (30 Minutes):
+   - Created an actor class for a damageable cube with health and armor, integrating the AbilitySystemComponent and AttributeSet for handling health and damage calculations.
+
+4. Attack Ability (1 Hour 30 Minutes):
+   - Developed the attack ability, including the retargeting of animations for the attack montage.
+   - Created a custom GameplayEffectExecutionCalculation to handle complex damage calculations (e.g., factoring in armor).
+   - Implemented a cooldown system to prevent repeated attacks within a short time frame.
+
+5. Health Bar Widget (15 Minutes):
+   - Developed a health bar UI that displays the player’s current health and integrated it into the viewport.
+
+Potential Improvements:
+Given more time, I would focus on additional features such as:
+- Scoring System: To track player performance during gameplay.
+- Death Screen and Menu: Adding these would enhance the overall game experience, providing a more complete and polished feel.
+- Custom PlayMontageAndWait Task: This would improve attack timing by syncing the attack hit event with specific moments in the animation montage, making the combat feel more realistic rather than triggering the hit instantly upon pressing the attack button.
+
+Challenges:
+One issue I encountered was a delay in the health bar reduction for clients in multiplayer, as it relied on updates from the player state. To resolve this, I would bind the health value directly to the health bar to ensure more immediate feedback when damage is taken.

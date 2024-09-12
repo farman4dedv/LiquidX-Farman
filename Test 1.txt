@@ -1,0 +1,1 @@
+We spawn 100,000 actors and store them in the MyActors array, followed by logging the name of each individual actor from the array.
